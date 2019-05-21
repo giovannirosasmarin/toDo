@@ -10,11 +10,23 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var input: UITextField!
+    
+    
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
 
+    @IBAction func addTask(_ sender: Any) {
+        
+        if(input.text != ""){
+        
+        list.append(input.text!)
+            input.text = ""
+    }
 }
 
+}
